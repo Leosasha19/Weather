@@ -1,0 +1,240 @@
+#root {
+  padding: 2rem;
+  position: absolute;
+  top: 0%;
+}
+.top_line {
+  height: 35px;
+}
+.select_menu {
+  position: relative;
+  left: 488px;
+  padding-left: 10px;
+  padding-top: 7px;
+  width: 190px;
+  height: 28px;
+  bottom: 2px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border: 1.5px solid gray;
+  background-color: #f6f6f6;
+  &__box {
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #dddddd;
+    width: 90px;
+    padding-left: 15px;
+    height: 23px;
+  }
+  .select_menu__box:focus {
+    outline: none;
+    border: 1px solid #22bbcf;
+    box-shadow: 0 0 5px rgba(34, 187, 207, 0.5);
+  }
+}
+.button_next {
+  position: relative;
+  left: 390px;
+  width: 28px;
+  height: 28px;
+  top: 45px;
+  background-color: #c1c0c0;
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  padding: 0 5px;
+  cursor: pointer;
+  outline: none;
+}
+.button_next_back {
+  position: relative;
+  left: 390px;
+  width: 28px;
+  height: 28px;
+  top: 45px;
+  background-color: #c1c0c0;
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  padding: 0 5px;
+  cursor: pointer;
+  outline: none;
+}
+.button_next:active {
+  border: 1px solid black;
+  transform: scale(0.90);
+}
+.button_next:focus,
+.button_next:focus-visible,
+.button_next:hover {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+}
+
+.button_next_back:active {
+  border: 1px solid black;
+  transform: scale(0.90);
+}
+.button_next_back:focus,
+.button_next:focus-visible,
+.button_next:hover {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+}
+.button_next::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  top: 7.5px;
+  right: 9px;
+}
+.button_next_back::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(-135deg);
+  top: 7.5px;
+  right: 7px;
+}
+.search{
+  position: relative;
+  left: 10px;
+  bottom: 44px;
+  height: 34px;
+  width: 190px;
+  border-top-left-radius: 25px;
+  border: 1.5px solid gray;
+  margin-bottom: 0px;
+  text-indent: 14px;
+  border-bottom: none;
+  outline: none;
+}
+.buttonSearch{
+  height: 37.5px;
+  width: 100px;
+  position: relative;
+  bottom: 41px;
+  left: 3px;
+  border-radius: 0 25px 0 0;
+  border: 1.5px solid gray;
+  border-bottom: none;
+  background-color: #f6f6f6;
+}
+.buttonSearch:focus,
+.buttonSearch:focus-visible,
+.buttonSearch:hover,
+.buttonSearch:active {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid gray;
+  border-bottom: none;
+}
+.noDetail {
+  display: none;
+}
+.detail {
+  width: 400px;
+  border: 1px solid gray;
+  border-radius: 0 0 25px 25px;
+  height: 135px;
+  display: flex;
+  background-color: #f6f6f6;
+  padding-top: 5px;
+  padding-left: 15px;
+  position: relative;
+  top: -1px;
+  left: 130px;
+  &__secondColumn {
+    margin-left: 25px;
+    margin-top: 30px;
+    font-size: 15px;
+    color: gray;
+    &__humidity {
+      margin-top: 7px;
+      margin-bottom: 7px;
+    }
+  }
+  &__feels {
+    margin-top: 26px;
+    color: gray;
+  }
+  &__text {
+    height: 30px;
+    margin: 0px;
+  }
+  &__temp {
+    margin: 0px;
+    height: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #22bbcf;
+  }
+  &__city {
+  margin-top: -2px;
+  color: gray;
+  font-size: 17px;
+    font-weight: bold;
+    height: 7px;
+  }
+}
+.weather_container {
+  display: flex;
+  height: auto;
+  width: 700px;
+  border: 1px solid gray;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  &__days {
+    width: 120px;
+    height: 115px;
+    flex-direction: column;
+    text-align: center;
+    &__icons {
+      height: 40px;
+      margin: 8px;
+    }
+    &__daysOfTheWeek{
+      color: #afaeae;
+      font-size: 15px;
+    }
+    &__dayAndNight {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      &__maxTemp {
+        color: #6c6b6b;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      &__minTemp {
+        color: #a1a1a1;
+        font-size: 13px;
+      }
+    }
+  }
+  &__days:hover {
+    border: 1px solid #bababa;
+    background-color: #e4e4e4;
+    border-radius: 15px;
+    width: 119px;
+    height: 113px;
+  }
+}
